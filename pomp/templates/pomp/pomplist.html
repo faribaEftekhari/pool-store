@@ -1,0 +1,38 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>لیست پمپ ها</title>
+  </head>
+  <body>
+    <h1>انواع پمپ های ایرانی و خارجی</h1>
+    <h1>لیست پمپ ها:</h1>
+    {%for pomp in pomps%}
+    <p>
+      <h2>
+        <a href="#">{{pomp.brand}}</a>
+      </h2>
+      <p>
+      <h3>{{pomp.models}}</h3>
+    </p>
+    <p>
+      <h2>{{pomp.price}}</h2>
+    </p>
+    <p>
+      <h2>
+        {{pomp.slug}}
+      </h2>
+    </p>
+    <p>
+      <h3>
+      {{pomp.snippet}}</h3>
+    </p>
+
+    </p>
+    {%endfor%}
+    <p>
+      <img src="{% static 'pic/IMG.jpg'%}" alt="Smiley face" width="42" height="42">
+    </p>
+  </body>
+</html>
